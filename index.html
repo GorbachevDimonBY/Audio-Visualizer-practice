@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Vizualize Audio</title>
+</head>
+
+<body>
+  <div class="settings-container">
+    <input class="activeCalc" type="file" id="file" accept="audio/*" />
+    <audio id="audio"></audio>
+
+
+    <form>
+      <div class="form-group">
+        <input type="text" id="x">
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label for="x">X:</label>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="y">
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label for="y">Y:</label>
+      </div>
+
+      <button class="activeCalc disabledCalc" type="button" disabled>Create</button>
+    </form>
+
+    <div class="choice-color">
+      <!-- ------ radio ----- -->
+      <div class="radio-container">
+        <div class="radio-box">
+          <input type="radio" id="radio" name="radio" checked>
+          <label for="radio">Multicolor</label>
+        </div>
+        <div class="radio-box">
+          <input type="radio" id="radio1" name="radio">
+          <label for="radio1">Monochrome</label>
+        </div>
+      </div>
+      <!-- ------ slide ----- -->
+      <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="1" class="slider" id="myRange">
+        <div class="color"></div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div id="block"></div>
+  
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

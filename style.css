@@ -1,0 +1,245 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: #333;
+}
+
+.settings-container {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 100px;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fff;
+  background: #000;
+  float: left;
+  box-sizing: border-box;
+}
+
+.choice-color {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+
+/* ------------- radio ---------------- */
+
+.radio-container {
+  margin: 30px 0;
+}
+
+.radio-box {
+  margin: 15px 0;
+}
+
+input[type=radio] {
+  display: none;
+  padding: 20px;
+}
+
+input[type=radio] + label {
+  margin: 0 15px;
+  color: #fff;
+  font-size: 24px;
+}
+
+input[type=radio] + label:before {
+  content: "\26AB";
+  border: 1px solid #fa5757;
+  color: #fa5757;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 20px;
+  margin: -5px 5px 0 0;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 0;
+  transition: ease 0.3s;
+}
+
+input[type=radio]:checked + label:before {
+  font-size: 20px;
+}
+
+/* ------------- slide ---------------- */
+
+.slidecontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  padding-left: 30px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 180px;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fa5757;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fa5757;
+  cursor: pointer;
+}
+
+.color {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #fff;
+  margin: 0 15px;
+}
+
+/* ------------- form ---------------- */
+
+.form-group {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.form-group > input {
+  font-size: 24px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 150px;
+  border: none;
+  border-bottom: 1px solid #757575;
+  background: #333;
+  color: #fff;
+}
+
+.form-group > input:focus {
+  outline: none;
+  background: #333;
+}
+
+.form-group > label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.form-group > input:focus ~ label,
+.form-group > input:valid ~ label {
+  top: -24px;
+  font-size: 20px;
+  color: #fa5757;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 164px;
+}
+
+.bar:before,
+.bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #fa5757;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+.form-group > input:focus ~ .bar:before,
+.form-group > input:focus ~ .bar:after {
+  width: 50%;
+}
+
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.activeCalc {
+  border: none;
+  background: #fa5757;
+  -webkit-box-shadow: 0 0 10px #fa5757;
+  box-shadow: 0 0 10px #fa5757;
+  padding: 7px 20px;
+  margin: 20px 0;
+  font-size: 18px;
+  color: #fff;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.disabledCalc {
+  background: #999;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-filter: brightness(70%);
+  filter: brightness(70%);
+}
+
+#file {
+  border: none;
+  background: #fa5757;
+  -webkit-box-shadow: 0 0 10px #fa5757;
+  box-shadow: 0 0 10px #fa5757;
+  padding: 7px;
+  margin: 50px 0;
+  font-size: 18px;
+  color: #fff;
+}
